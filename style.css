@@ -1,0 +1,9 @@
+*{margin:0;padding:0;}
+body{width:1200px;margin:0 auto;}
+a{text-decoration:none;color:#cc6600}
+.slide{width:500px;height:500px;margin:0 auto;overflow:hidden;position:relative;}
+.slide .img-div{position:absolute;top:0;left:0;width:2000px;}
+.slide .img-div img{float:left;}
+.slide img{width:500px;}
+.slide-btn{width:500px;height:20px;line-height:20px;position:absolute;bottom:10px;z-index:11;text-align:center;}
+.slide-btn a.hover{color:#ccc;}

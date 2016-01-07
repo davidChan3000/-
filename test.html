@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css" type="text/css" /> 
+	<script type="text/javascript" src="http://2008mail.sina.com.cn/js/r.core.js?ver=20140811"></script>
+	<script src="./Carousel.js" type="text/javascript"></script>
+	<style>
+		.scrollBox{ height:80px; overflow: hidden;position: relative;}
+		.scrollItem{position: absolute;top:0;left:0;}
+		.scrollBox a{display: block;}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="slide" id="slide">
+			<div class="img-div">
+				<img src="img/banner1.png" title="图片1"/>
+				<img src="img/banner2.png" title="图片2"/>
+				<img src="img/banner3.png" title="图片3"/>
+				<img src="img/banner4.jpg" title="图片4"/>
+			</div>
+			<div class="slide-btn">
+				<!-- <a href="#" class="hover">●</a>
+				<a href="#">●</a>
+				<a href="#">●</a> -->
+			</div>
+		</div>
+		<div style="text-align:center" class="oper_btn">
+				<input type="button" value="left"/>
+				<input type="button" value="right" />	
+			</div>
+		<div class="scrollBox">
+			<div class="scrollItem">
+				<a>asdasdsad1</a>
+				<a>asdasdsad2</a>
+				<a>asdasdsad3</a>
+				<a>asdasdsad4</a>
+				<a>asdasdsad5</a>
+				<a>asdasdsad6</a>
+				<a>asdasdsad7</a>
+				<a>asdasdsad8</a>
+				<a>asdasdsad9</a>
+				<a>asdasdsad10</a>
+				<a>asdasdsad11</a>
+				
+			</div>
+			
+		</div>
+	</div>
+	<script>
+		using(['r/core'], function(R){
+    		var window = R.global, document = window.document, DOM = R.dom, E = R.event, $S = DOM.query, $ = DOM.$;
+    		var operBtn =$S("input", $S(".oper_btn"));
+    		var t = new Carousel({
+    			items : [$S(".img-div"), "img"],
+    			origins : [$S(".slide-btn"), "hover"],
+    			cycle : true,
+    			index : 2
+    			//optionObj : [operBtn[0], operBtn[1]] //左右操作元素 typeof object
+
+    		});
+    		
+    		var k = new Carousel({
+    			items : [$S(".scrollItem"), "a"],
+    			origins : [],
+    			direction : "top",
+    			index : 5,
+    			time : 3000,
+    			cycle : true
+    		})
+    		
+    	})
+	</script>
+</body>
+</html>
